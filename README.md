@@ -53,7 +53,11 @@ use {
 {
   data_path = vim.fn.stdpath('data') .. '/lazy/comment-Art/lua/comment-art/data.txt',
   data_en_path = vim.fn.stdpath('data') .. '/lazy/comment-Art/lua/comment-art/data-en.txt',
-  language = 'english', -- 'english' or 'chinese'
+  language = 'english', -- 'english' or 'chinese' 
+  prompt = {
+    title_en = 'Generate pattern note:',
+    title="生成图案注释:",
+  },
   rules = {
     ['c'] = { prefix = '/* ', suffix = '*/', line_prefix = '* ', lines = true },
     ['cpp'] = { prefix = '/* ', suffix = '*/', line_prefix = '* ', lines = true },

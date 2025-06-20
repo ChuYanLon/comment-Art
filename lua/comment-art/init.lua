@@ -3,6 +3,10 @@ M.config = {
   data_path = vim.fn.stdpath('data') .. '/lazy/comment-Art/lua/comment-art/data.txt',
   data_en_path = vim.fn.stdpath('data') .. '/lazy/comment-Art/lua/comment-art/data-en.txt',
   language = 'english',
+  prompt = {
+    title_en = 'Generate pattern note:',
+    title="生成图案注释:",
+  },
   rules = {
     ['c'] = { prefix = '/* ', suffix = '*/', line_prefix = '* ', lines = true },
     ['cpp'] = { prefix = '/* ', suffix = '*/', line_prefix = '* ', lines = true },
@@ -142,9 +146,9 @@ local function show_picker()
     print('No patterns found in data file.')
     return
   end
-
+  local prompt_title = M.config.language == 'chinese' and M.config.prompt.title or M.config.prompt.title_en
   vim.ui.select(options, {
-    prompt = 'Generate pattern note:',
+    prompt = prompt_title,
     format_item = function(item)
       return item
     end,
