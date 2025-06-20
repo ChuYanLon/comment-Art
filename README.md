@@ -92,4 +92,4 @@ vim.keymap.set('n', '<leader>cs', ':CommentArt<CR>', { desc = 'Generate pattern 
 PRs and Issues are welcome! Please share your creative patterns or feature suggestions.
 
 ## 📄 License
-This project uses the MIT License . You can freely use, modify, and distribute the code while retaining the author information.
+This project uses the [MIT License](./LICENSE) . You can freely use, modify, and distribute the code while retaining the author information.
